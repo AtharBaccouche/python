@@ -15,23 +15,35 @@ class User:
         print(f"Rewards is {self.is_rewards_member}")
         print(f"Gold card is {self.gold_card_points}")
         print("==================")
+        return self
+
     def enrroll(self):
-        # self.is_rewards_member = False
-        # self.gold_card_points=200
-        if self.is_rewards_member==True:
-            print("User is a member")
-            return False
+        # NINJA BONUS
+        # Add logic in the enroll method to check if 
+        # they are a member already, and if they are, 
+        # print "User already a member." and return False, otherwise return True.
+        # if self.is_rewards_member:
+        #     print("User is a member")
+        #     return self
+        # Have this method change the user's member
+        # status to True and 
         self.is_rewards_member = True
         self.gold_card_points=200
+        return self
+    
     def spend_points(self, amount):
         self.gold_card_points=self.gold_card_points-amount
+        return self
 
         
 
 
 user1=User("athar", "baccouche","baccouche.athar@gmail.com",23 )
-user1.display_info()
-user1.enrroll()
-user1.display_info()
+# user1.display_info()
+# user1.enrroll()
+# user1.display_info()
 # user1.spend_points(100)
 # user1.display_info()
+
+user1.display_info().enrroll().display_info().spend_points(100).display_info()
+
