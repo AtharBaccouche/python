@@ -8,12 +8,12 @@ class Player:
     
 
     # * NINJA BONUS class mehotd
-    @classmethod
-    def add_players(cls, data):
-        player_objects = []
-        for dict in data:
-            player_objects.append(cls(dict))
-        return player_objects
+    # @classmethod
+    # def add_players(cls, data):
+    #     player_objects = []
+    #     for dict in data:
+    #         player_objects.append(cls(dict))
+    #     return player_objects
     
     # Not required for the assignment but useful
     # __repr__(self) is a python system method that 
